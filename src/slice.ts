@@ -1,16 +1,8 @@
-import {UnionToTuple} from './utility';
-import {CharIndexes} from './indexes';
+import {CharIndexTuple} from './indexes';
+import {PartTuple} from './utility';
 
-type SliceNumbers<
-	Indexes extends Readonly<[number, ...number[]]>,
-	Maximum extends number
-> = Indexes extends [infer Head, Maximum] ? Head : Indexes;
-
-type CreateIndexTuple<Str extends string> = UnionToTuple<keyof CharIndexes<Str> & number> &
-	[number, ...number[]];
-
-export type Slice<Str extends string, Idx extends number> = SliceNumbers<
-	CreateIndexTuple<Str>,
+export type Slice<Str extends string, Idx extends number> = PartTuple<
+	CharIndexTuple<Str>,
 	Idx
 >;
 
