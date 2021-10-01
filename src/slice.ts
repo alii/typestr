@@ -1,9 +1,8 @@
 import {CharIndexTuple} from './indexes';
-import {PartTuple} from './utility';
+import {FlipTuple, PartTuple} from './utility';
 
-export type Slice<Str extends string, Idx extends number> = PartTuple<
-	CharIndexTuple<Str>,
-	Idx
+export type Slice<Str extends string, Idx extends number> = FlipTuple<
+	PartTuple<FlipTuple<CharIndexTuple<Str>>, Idx>
 >;
 
 type y = Slice<'hewfsdas', 2>;
