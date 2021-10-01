@@ -12,11 +12,11 @@ type Head<
 type Tail<
 	Str extends string,
 	Start extends number,
-	Result extends Array<0> = []
-> = Result['length'] extends Start
+	Counter extends Array<0> = []
+> = Counter['length'] extends Start
 	? Str
 	: Str extends `${string}${infer N}`
-	? Tail<N, Start, [0, ...Result]>
+	? Tail<N, Start, [0, ...Counter]>
 	: never;
 
 export type Substr<
