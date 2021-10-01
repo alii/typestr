@@ -1,12 +1,12 @@
 import {UnionToTuple} from './utility';
-import {MapStrToIndex} from './indexes';
+import {CharIndexes} from './indexes';
 
 type SliceNumbers<
 	Indexes extends Readonly<[number, ...number[]]>,
 	Maximum extends number
 > = Indexes extends [infer Head, Maximum] ? Head : Indexes;
 
-type CreateIndexTuple<Str extends string> = UnionToTuple<keyof MapStrToIndex<Str> & number> &
+type CreateIndexTuple<Str extends string> = UnionToTuple<keyof CharIndexes<Str> & number> &
 	[number, ...number[]];
 
 export type Slice<Str extends string, Idx extends number> = SliceNumbers<
