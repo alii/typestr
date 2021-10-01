@@ -13,6 +13,7 @@ module.exports = {
 	rules: {
 		'@typescript-eslint/comma-dangle': 'off',
 		'@typescript-eslint/indent': 'off',
+		'@typescript-eslint/ban-types': 'off',
 	},
 	ignorePatterns: ['dist'],
 };

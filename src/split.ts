@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-types */
 export type Split<
 	Str extends string,
 	Splitter extends string,
