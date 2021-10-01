@@ -7,9 +7,9 @@ export type Prepend<Tuple extends unknown[], Addend> = ((
 	? Result
 	: Tuple;
 
-export type Reverse<Tuple extends unknown[], Prefix extends unknown[] = []> = {
+export type FlipTuple<Tuple extends unknown[], Prefix extends unknown[] = []> = {
 	0: Prefix;
 	1: ((..._: Tuple) => unknown) extends (addend: infer First, ...rest: infer Next) => unknown
-		? Reverse<Next, Prepend<Prefix, First>>
+		? FlipTuple<Next, Prepend<Prefix, First>>
 		: never;
 }[Tuple extends [unknown, ...unknown[]] ? 1 : 0];
