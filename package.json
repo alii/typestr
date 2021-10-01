@@ -1,7 +1,7 @@
 {
-	"name": "node-template",
-	"description": "An ESM node package template with ESLint, Prettier & TypeScript built in. Powered by esbuild.",
-	"version": "1.0.5",
+	"name": "typestr",
+	"description": "a string standard library for compile-time typescript",
+	"version": "1.0.0",
 	"types": "./dist/index.d.ts",
 	"type": "module",
 	"exports": {
@@ -10,7 +10,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/alii/node-template.git"
+		"url": "git+https://github.com/alii/typestr.git"
 	},
 	"author": "Alistair Smith <alistairsmith01@gmail.com> (https://alistair.sh)",
 	"license": "MIT",
@@ -34,15 +34,15 @@
 		"fix": "eslint ./src/**/*.ts --fix"
 	},
 	"bugs": {
-		"url": "https://github.com/alii/nextkit/issues"
+		"url": "https://github.com/alii/typestr/issues"
 	},
-	"homepage": "https://github.com/alii/nextkit#readme",
+	"homepage": "https://github.com/alii/typestr#readme",
 	"files": [
 		"dist",
 		"package.json"
 	],
 	"keywords": [
-		"node",
-		"template"
+		"strings",
+		"typescript"
 	]
 }
