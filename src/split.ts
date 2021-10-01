@@ -4,4 +4,6 @@ export type Split<
 	Result extends string[] = []
 > = Str extends `${infer Before}${Splitter}${infer After}`
 	? Split<After, Splitter, [...Result, Before]>
+	: Str extends ''
+	? Result
 	: [...Result, Str];
