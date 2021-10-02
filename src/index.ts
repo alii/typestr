@@ -1,11 +1,14 @@
 import * as Utility from './utility';
 
-export {Join} from './join';
-export {Concat} from './concat';
-export {Split} from './split';
-export {Replace} from './replace';
-export {Reverse} from './reverse';
-export {Includes} from './includes';
-export {CharAt} from './char-at';
+export * from './char-at';
+export * from './concat';
+export * from './includes';
+export * from './indexes';
+export * from './join';
+export * from './remove';
+export * from './replace';
+export * from './reverse';
+export * from './split';
+export * from './substr';
 
 export {Utility};
