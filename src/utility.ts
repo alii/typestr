@@ -14,9 +14,6 @@ export type TupleHasLength<Tuple, IfTrue = 1, IfFalse = 0> = Tuple extends [
 	? IfTrue
 	: IfFalse;
 
-// TupleConsumer
-type TC<T> = (args: T) => void;
-
 export type FlipTuple<
 	Tuple extends unknown[],
 	Prefix extends unknown[] = []
