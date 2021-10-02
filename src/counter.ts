@@ -24,6 +24,12 @@ type V = 0;
  * type InitialValue = MyCounter['val'];
  * type IncrementedCounter = MyCounter['incr'];
  * type IncrementedValue = IncrementedCounter['val'];
+ * // IncrementedValue === 1
+ *
+ * @example
+ * type Y = Counter;
+ * type X = Y['incr']['incr']['incr']['decr']['val'];
+ * // X === 2
  */
 export type Counter<T extends V[] = []> = {
 	incr: Counter<[...T, V]>;
