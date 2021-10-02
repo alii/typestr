@@ -19,6 +19,10 @@ type Tail<
 	? Tail<N, Start, [0, ...Counter]>
 	: never;
 
+/**
+ * Pulls a substring at a start and end index.
+ * @warning This requres the End to be passed
+ */
 export type Substr<
 	Str extends string,
 	Start extends number,

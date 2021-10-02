@@ -1,3 +1,6 @@
+/**
+ * Splits a string by a given splitter value. Returns a tuple of splitted values.
+ */
 export type Split<
 	Str extends string,
 	Splitter extends string,
