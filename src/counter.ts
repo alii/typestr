@@ -6,7 +6,7 @@
 type V = 0;
 
 /**
- * Utility type for an incremental counter.
+ * Utility type for an incremental counter. Counters start at 0.
  * This works adding a new item to a tuple every time we want to increment.
  *
  * We are then able to fetch the current value of the counter by accessing
@@ -27,5 +27,6 @@ type V = 0;
  */
 export type Counter<T extends V[] = []> = {
 	incr: Counter<[...T, V]>;
+	decr: T extends [V, ...infer Rest] ? Counter<Rest & V[]> : Counter;
 	val: T['length'];
 };
