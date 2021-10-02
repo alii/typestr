@@ -31,7 +31,8 @@
 	"scripts": {
 		"build": "tsup src/index.ts --dts --format esm,cjs",
 		"lint": "eslint ./src/**/*.ts",
-		"fix": "eslint ./src/**/*.ts --fix"
+		"fix": "eslint ./src/**/*.ts --fix",
+		"prepublish": "yarn build"
 	},
 	"bugs": {
 		"url": "https://github.com/alii/typestr/issues"
