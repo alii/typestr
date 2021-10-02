@@ -1,4 +1,4 @@
-// Note: this file is exported in ./utilty.ts as it's not a string type,
+// Note: this file is exported in ./utility.ts as it's not a string type,
 // but I felt it qualifies to exist in it's own file
 
 // Most memory efficient way to increment as this takes up
@@ -10,7 +10,7 @@ type V = 0;
  * This works adding a new item to a tuple every time we want to increment.
  *
  * We are then able to fetch the current value of the counter by accessing
- * the length fo the tuple which would be incremeneted every time we push
+ * the length fo the tuple which would be incremented every time we push
  * a new item to it.
  *
  * This is also a fun learning resource, as this is how the substring type
