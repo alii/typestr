@@ -2,6 +2,7 @@
 
 <h1 align="center"><code>typestr</code></h1>
 <h2 align="center">TypeScript string library</h1>
+<h4 align="center"><code>npm i --save typestr</code></h4>
 
 ### Why?
 
