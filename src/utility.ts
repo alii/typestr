@@ -52,3 +52,5 @@ export type UnionToTuple<T> = UnionToIntersection<
 > extends (_: never) => infer W
 	? [...UnionToTuple<Exclude<T, W>>, W]
 	: [];
+
+export {Counter} from './counter';
