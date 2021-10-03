@@ -10,5 +10,6 @@ export * from './replace';
 export * from './reverse';
 export * from './split';
 export * from './substr';
+export * from './length';
 
 export {Utility};
