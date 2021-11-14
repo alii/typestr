@@ -36,6 +36,8 @@ export type PartTuple<Tuple extends unknown[], Part> = Tuple extends [
 		: PartTuple<Rest, Part>
 	: [];
 
+export type Then<T> = T extends PromiseLike<infer A> ? Then<A> : T;
+
 export type Indices<T extends {length: number}> = Exclude<
 	Partial<T>['length'],
 	T['length']
