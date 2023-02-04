@@ -1,8 +1,6 @@
 // Note: this file is exported in ./utility.ts as it's not a string type,
 // but I felt it qualifies to exist in it's own file
 
-// Most memory efficient way to increment as this takes up
-// a lot of ram, especially when you are iterating a lot of times.
 type V = 0;
 
 /**
